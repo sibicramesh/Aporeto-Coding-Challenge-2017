@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="all">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Contributions</title>
+    <link rel="stylesheet" type="text/css" href="indexStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="githubApp">
+<div class="center">
+    <h1>GitHub Contributions-Aporeto Coding Challenge</h1>
+    <form ng-submit="gitFunc()" method="post" ng-controller="githubCtrl">
+        <h2>Enter the UserName:</h2>
+    <input type="text" ng-model="userName" placeholder="Enter UserName" class="c1"><br>
+        <h2>Enter the date from which you want the contributions:</h2>
+        <input type="text" ng-model="gDate" class="c1" placeholder="Enter Date in YYYY-MM-DD" name="gDate" required />
+    <input type="submit" class="button" value="Get Details">
+    <p ng-model="countrycon">
+    <div class="b1">Total Contributions: {{totalContributions.total_contributions}}</div><br>
+    </p>
+
+</form>
+</div>
+</body>
+</html>
